@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title> AlchemyAPI - Sentiment Analysis </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='icon' type='image/png' href='https://s3.amazonaws.com/alchemyapi/img/favicon.png' />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">
+  
+  </head>
+  <body>
+
+	<div class='container'>
+		<div class='page-header'>
+			<h1>Sentiment Analysis <small>document level sentiment polarity, keyword and entity level targeted sentiment </small></h1>
+		</div>
+		
+		<form action="http://127.0.0.1:3000" method="post" role="form">
+		  <div class="form-group">
+		    <label for="review">Consumer Review</label>
+		    <textarea name="review" type="text" class="form-control" id="review" placeholder="Enter review" cols="40" rows="5"></textarea>
+		  </div>
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+
+		<h3>Processed Text</h3>
+
+		<p><%= entities.text %></p>
+		<h1>Entity-level Targeted Sentiment</h1>
+		<h3>Response Object</h3>
+		<textarea rows='20' class='form-control'><%= entities.response %></textarea>
+		
+		<h3>Entities</h3>
+		<% entities.results.forEach(function(entity){ %>
+			<p><strong>Entity:</strong> <%= entity.text %><br/>
+			<strong>Sentiment:</strong> <%= entity.sentiment.type %>  
+			<strong>Sentiment Score</strong> <%= entity.sentiment.score %>
+
+		<% }); %>
+
+		<h1>Keyword-level Targeted Sentiment</h1>
+		<h3>Response Object</h3>
+		<textarea rows='20' class='form-control'><%= keywords.response %></textarea>
+		<% keywords.results.forEach (function(keyword){ %>
+			<p><strong>Entity:</strong> <%= keyword.text %><br/>
+			<strong>Sentiment:</strong> <%= keyword.sentiment.type %>  
+			<strong>Sentiment Score</strong> <%= keyword.sentiment.score %>
+		<% }); %>
+		<hr>
+		
+		<h1>Document-level Sentiment Polarity</h1>
+		<h3>Response Object</h3>
+		<textarea rows='10' class='form-control'> <%= sentiment.response %></textarea>
+	
+		<h1>Document Sentiment</h1>
+		<p><strong>Type:</strong> <%= sentiment.results.type %><br/>
+		<strong>Score:</strong><%= sentiment.results.score %></p>
+		
+		<hr>
+
+
+	</div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+		
+
