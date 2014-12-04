@@ -1,34 +1,97 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/bin/npm', 'start' ]
+1 verbose cli [ 'node', '/usr/bin/npm', 'install', 'boostrap' ]
 2 info using npm@2.0.0
 3 info using node@v0.10.32
 4 verbose node symlink /usr/bin/node
-5 verbose run-script [ 'prestart', 'start', 'poststart' ]
-6 info prestart alchemyapi_node@0.10.1
-7 info start alchemyapi_node@0.10.1
-8 verbose unsafe-perm in lifecycle true
-9 info alchemyapi_node@0.10.1 Failed to exec start script
-10 verbose stack Error: alchemyapi_node@0.10.1 start: `node app.js`
-10 verbose stack Exit status 8
-10 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:212:16)
-10 verbose stack     at ChildProcess.emit (events.js:98:17)
-10 verbose stack     at maybeClose (child_process.js:756:16)
-10 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:823:5)
-11 verbose pkgid alchemyapi_node@0.10.1
-12 verbose cwd /vagrant/work/NLP/node_alchemy
-13 error Linux 3.2.0-65-generic-pae
-14 error argv "node" "/usr/bin/npm" "start"
-15 error node v0.10.32
-16 error npm  v2.0.0
-17 error code ELIFECYCLE
-18 error alchemyapi_node@0.10.1 start: `node app.js`
-18 error Exit status 8
-19 error Failed at the alchemyapi_node@0.10.1 start script.
-19 error This is most likely a problem with the alchemyapi_node package,
-19 error not with npm itself.
-19 error Tell the author that this fails on your system:
-19 error     node app.js
-19 error You can get their info via:
-19 error     npm owner ls alchemyapi_node
-19 error There is likely additional logging output above.
-20 verbose exit [ 1, true ]
+5 warn package.json consolidate@0.9.1 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'boostrap', null ]
+8 verbose cache add spec="boostrap" args=["boostrap",null]
+9 verbose parsed spec { raw: 'boostrap',
+9 verbose parsed spec   scope: null,
+9 verbose parsed spec   name: 'boostrap',
+9 verbose parsed spec   rawSpec: '',
+9 verbose parsed spec   spec: '*',
+9 verbose parsed spec   type: 'range' }
+10 verbose parsed spec { raw: 'boostrap',
+10 verbose parsed spec   scope: null,
+10 verbose parsed spec   name: 'boostrap',
+10 verbose parsed spec   rawSpec: '',
+10 verbose parsed spec   spec: '*',
+10 verbose parsed spec   type: 'range' }
+11 verbose addNamed [ 'boostrap', '*' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile d34fb3e6-boostrap boostrap@*
+14 verbose lock boostrap@* /home/vagrant/.npm/d34fb3e6-boostrap.lock
+15 silly addNameRange { name: 'boostrap', range: '*', hasData: false }
+16 verbose mapToRegistry name boostrap
+17 verbose mapToRegistry uri https://registry.npmjs.org/boostrap
+18 verbose request on initialization, where is /boostrap
+19 verbose request after pass 1, where is /boostrap
+20 verbose request url raw /boostrap
+21 verbose request resolving registry [ 'https://registry.npmjs.org/', './boostrap' ]
+22 verbose request after pass 2, where is https://registry.npmjs.org/boostrap
+23 verbose request no auth needed
+24 info attempt registry request try #1 at 22:15:29
+25 verbose request id 68d132c6149df798
+26 http request GET https://registry.npmjs.org/boostrap
+27 http 404 https://registry.npmjs.org/boostrap
+28 verbose headers { date: 'Thu, 04 Dec 2014 22:12:21 GMT',
+28 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+28 verbose headers   'content-type': 'application/json',
+28 verbose headers   'cache-control': 'max-age=0',
+28 verbose headers   'content-length': '52',
+28 verbose headers   'accept-ranges': 'bytes',
+28 verbose headers   via: '1.1 varnish',
+28 verbose headers   age: '0',
+28 verbose headers   'x-served-by': 'cache-lax1421-LAX',
+28 verbose headers   'x-cache': 'MISS',
+28 verbose headers   'x-cache-hits': '0',
+28 verbose headers   'x-timer': 'S1417731141.760467,VS0,VE43',
+28 verbose headers   'keep-alive': 'timeout=10, max=50',
+28 verbose headers   connection: 'Keep-Alive' }
+29 silly registry.get cb [ 404,
+29 silly registry.get   { date: 'Thu, 04 Dec 2014 22:12:21 GMT',
+29 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 silly registry.get     'content-type': 'application/json',
+29 silly registry.get     'cache-control': 'max-age=0',
+29 silly registry.get     'content-length': '52',
+29 silly registry.get     'accept-ranges': 'bytes',
+29 silly registry.get     via: '1.1 varnish',
+29 silly registry.get     age: '0',
+29 silly registry.get     'x-served-by': 'cache-lax1421-LAX',
+29 silly registry.get     'x-cache': 'MISS',
+29 silly registry.get     'x-cache-hits': '0',
+29 silly registry.get     'x-timer': 'S1417731141.760467,VS0,VE43',
+29 silly registry.get     'keep-alive': 'timeout=10, max=50',
+29 silly registry.get     connection: 'Keep-Alive' } ]
+30 silly lockFile d34fb3e6-boostrap boostrap@*
+31 silly lockFile d34fb3e6-boostrap boostrap@*
+32 verbose stack Error: 404 Not Found: boostrap
+32 verbose stack     at RegClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:259:14)
+32 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:198:65)
+32 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:236:22)
+32 verbose stack     at Request.emit (events.js:98:17)
+32 verbose stack     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+32 verbose stack     at Request.emit (events.js:117:20)
+32 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+32 verbose stack     at IncomingMessage.emit (events.js:117:20)
+32 verbose stack     at _stream_readable.js:943:16
+32 verbose stack     at process._tickCallback (node.js:419:13)
+33 verbose statusCode 404
+34 verbose pkgid boostrap
+35 verbose cwd /vagrant/work/NLP/Sentiment-Analysis
+36 error Linux 3.2.0-65-generic-pae
+37 error argv "node" "/usr/bin/npm" "install" "boostrap"
+38 error node v0.10.32
+39 error npm  v2.0.0
+40 error code E404
+41 error 404 Not Found: boostrap
+41 error 404
+41 error 404 'boostrap' is not in the npm registry.
+41 error 404 You should bug the author to publish it (or use the name yourself!)
+41 error 404 It was specified as a dependency of 'alchemyapi_node'
+41 error 404
+41 error 404 Note that you can also install from a
+41 error 404 tarball, folder, http url, or git url.
+42 verbose exit [ 1, true ]
