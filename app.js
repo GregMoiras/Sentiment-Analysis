@@ -3,7 +3,8 @@ var express = require('express');
 var consolidate = require('consolidate');
 
 var app = express();
-var server = require('http').createServer(app);
+var server = require('https').createServer(app);
+
 
 //Create the AlchemyAPI object
 var AlchemyAPI = require('./alchemyapi');
