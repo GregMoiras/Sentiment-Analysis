@@ -1,5 +1,5 @@
 
-var https = require('https');
+var http = require('http');
 var fs = require('fs');
 
 
@@ -163,7 +163,7 @@ function AlchemyAPI() {
       opts['headers'] = {'Content-Length': reqBody.length};
     }
 
-    var postReq = https.request(opts, function (res) {
+    var postReq = http.request(opts, function (res) {
       var response = "";
       res.setEncoding('utf8');
       res.on('data', function (chunk) { response += chunk; });

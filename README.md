@@ -1,16 +1,14 @@
-## Getting Started with the Node.js SDK ##
+## Settin Up The Sentiment Analysis Application ##
+
+-- You must have node and npm installed -- 
 
 To get started and run the example, simply:
 
-	git clone https://github.com/AlchemyAPI/alchemyapi_node.git
-	cd alchemyapi_node
+	git clone https://github.com/GregMoiras/Sentiment-Analysis
+	cd Sentiment-Analysis
 	npm install
-	node alchemyapi.js YOUR_KEY_HERE
 	node app.js
 
-
-Just replace YOUR_KEY_HERE with your key, and you should be good to go.
-
-The example will be available at: http://localhost:3000
+The web application will be available at: http://localhost:3000
 
 
